@@ -9,6 +9,7 @@ dist/
 .env
 .env.*
 *.env
+!.env.example
 agent-runtime.env
 *.key
 *.pem
@@ -30,6 +31,5 @@ credentials.json
 # .git/info/exclude too; seeded here so it holds from the very first commit.
 /.agents/
 /qa/
-/execution-summary.md
 /07-execution-summary.md
 /debug.log

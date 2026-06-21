@@ -15,6 +15,7 @@ A frontend-only random number generator web app for work item `F1`. The app rend
 - `src/` source HTML, CSS, and JavaScript
 - `dist/` generated static build output
 - `tools/` local Python build and static-serve helpers
+- `execution-summary.md` implementation summary for work item `F1`
 
 ## Run Locally
 
@@ -34,6 +35,12 @@ python tools/build_static.py
 python tools/serve_static.py
 ```
 
+If you want the server to read the built output explicitly:
+
+```bash
+uv run python tools/serve_static.py --directory dist
+```
+
 ## Docker
 
 ```bash
@@ -45,4 +52,5 @@ Then open `http://127.0.0.1:8000`.
 ## Notes
 
 - No secrets are required for this app.
+- `.env.example` is included only to satisfy the project contract; the app does not consume runtime variables.
 - The deployed artifact is the static `dist/` folder.
