@@ -1,0 +1,13 @@
+[project]
+name = "numbers-random-web-app"
+version = "0.1.0"
+description = "Static stylish random number generator web app"
+requires-python = ">=3.13"
+dependencies = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+package = false

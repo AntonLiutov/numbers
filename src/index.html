@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Generate a random whole number from 1 to 100 in a stylish browser app."
+    />
+    <title>Numbers</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero card">
+        <div class="hero-copy">
+          <p class="eyebrow">Single-purpose utility</p>
+          <h1>Random numbers, delivered with precision.</h1>
+          <p class="lede">
+            Trigger one action and get one whole number between 1 and 100.
+          </p>
+        </div>
+        <div class="display-panel" aria-live="polite" aria-atomic="true">
+          <p class="display-label">Current output</p>
+          <div class="number-stage">
+            <span id="number-value" class="number-value nums">--</span>
+          </div>
+          <p id="number-status" class="display-status">
+            Ready when you are.
+          </p>
+        </div>
+      </section>
+
+      <section class="control-strip">
+        <button id="generate-button" class="btn generate-button" type="button">
+          Generate Number
+        </button>
+      </section>
+    </main>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+  </html>

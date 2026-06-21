@@ -1,0 +1,35 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+dist/
+.env
+# ADL secrets safety — never commit credentials
+.env
+.env.*
+*.env
+agent-runtime.env
+*.key
+*.pem
+*.pfx
+*.p12
+id_rsa
+id_rsa.*
+id_ed25519
+id_ed25519.*
+*.secret
+.secrets/
+secrets/
+credentials.json
+.npmrc
+.pypirc
+
+# ADL run scaffolding — never commit into the deliverable. Root-anchored (leading /) so
+# a legit nested path like src/qa/ is untouched; kept untracked at runtime via
+# .git/info/exclude too; seeded here so it holds from the very first commit.
+/.agents/
+/qa/
+/execution-summary.md
+/07-execution-summary.md
+/debug.log
