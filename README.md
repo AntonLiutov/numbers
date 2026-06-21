@@ -1,6 +1,6 @@
 # Numbers
 
-A frontend-only random number generator web app for work item `F1`. The app renders a single stylish browser experience, generates one whole number from `1` to `100` on user interaction, and builds to a static `dist/` bundle.
+A frontend-only random number generator web app for work items `F1` and `DEPLOY`. The app renders a single stylish browser experience, generates one whole number from `1` to `100` on user interaction, builds to a static `dist/` bundle, and is deployed to an Azure review URL.
 
 ## Requirements Coverage
 
@@ -10,12 +10,25 @@ A frontend-only random number generator web app for work item `F1`. The app rend
 - Stylish modern visual treatment
 - Fast, simple, static deployment shape with no backend
 
+## Review Deployment
+
+Review URL:
+
+- `https://app-agentic-numbers-dev.whitesea-3e028355.eastus.azurecontainerapps.io`
+
+Azure resources used for review hosting:
+
+- Resource group: `rg-agentic-dev`
+- Container Apps environment: `agentic-dev-env`
+- Container registry: `agenticdevacr`
+- Review app: `app-agentic-numbers-dev`
+
 ## Project Structure
 
 - `src/` source HTML, CSS, and JavaScript
 - `dist/` generated static build output
 - `tools/` local Python build and static-serve helpers
-- `execution-summary.md` implementation summary for work item `F1`
+- `execution-summary.md` implementation summary for the current delivered work item
 
 ## Run Locally
 
@@ -54,3 +67,4 @@ Then open `http://127.0.0.1:8000`.
 - No secrets are required for this app.
 - `.env.example` is included only to satisfy the project contract; the app does not consume runtime variables.
 - The deployed artifact is the static `dist/` folder.
+- The current review surface runs on Azure Container Apps using the shared dev environment reuse path captured in the deployment artifacts.
